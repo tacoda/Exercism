@@ -2,5 +2,5 @@
   #:export (hello))
 
 (define hello
-    (lambda ()
-        "Hello, World!"))
+  (lambda ()
+    "Hello, World!"))
