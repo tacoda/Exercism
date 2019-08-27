@@ -1,0 +1,18 @@
+class ResistorColorDuo
+  # 0 to 9 in the sequence: Black - Brown - Red - Orange - Yellow - Green - Blue - Violet - Grey - White
+  @@colors = {
+    'Black' => 0,
+    'Brown' => 1,
+    'Red' => 2,
+    'Orange' => 3,
+    'Yellow' => 4,
+    'Green' => 5,
+    'Blue' => 0,
+    'Violet' => 0,
+    'Grey' => 0,
+    'White' => 0,
+  }
+  def self.value(colors)
+    colors.take(2).reduce(0) { |color|}
+  end
+end
