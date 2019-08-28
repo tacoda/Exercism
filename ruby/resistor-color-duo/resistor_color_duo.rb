@@ -1,5 +1,5 @@
 class ResistorColorDuo
-  @@colors = {
+  COLORS = {
     'black' => '0',
     'brown' => '1',
     'red' => '2',
@@ -13,6 +13,6 @@ class ResistorColorDuo
   }
 
   def self.value(colors)
-    colors.take(2).map { |c| @@colors[c] }.join.to_i
+    colors.take(2).map(&COLORS).join.to_i
   end
 end
