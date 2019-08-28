@@ -1,5 +1,5 @@
 class Complement
-  @@choices = {
+  TRANSITIONS = {
     'G' => 'C',
     'C' => 'G',
     'T' => 'A',
@@ -7,10 +7,6 @@ class Complement
   }
 
   def self.of_dna(string)
-    string.chars.map { |c| next_choice(c) }.join
-  end
-
-  def self.next_choice(char)
-    @@choices[char]
+    string.chars.map(&TRANSITIONS).join
   end
 end
