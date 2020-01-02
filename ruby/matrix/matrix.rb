@@ -3,7 +3,7 @@ class Matrix
 
   def initialize(matrix_string)
     @rows = []
-    matrix_string.split("\n").each do |row_string|
+    matrix_string.each_line do |row_string|
       @rows << row_string.split(' ').map(&:to_i)
     end
   end
