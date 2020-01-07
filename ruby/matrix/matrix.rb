@@ -2,9 +2,8 @@ class Matrix
   attr_reader :rows
 
   def initialize(matrix_string)
-    @rows = []
-    matrix_string.each_line do |row_string|
-      @rows << row_string.split(' ').map(&:to_i)
+    @rows = matrix_string.lines.map do |row|
+      row.split(' ').map(&:to_i)
     end
   end
 
