@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 main () {
-  NAME='you'
-  if [[ -n $1 ]]; then
-    NAME=$1
+  name='you'
+  if [[ $# -gt 0 ]]; then
+    name=$1
   fi
-  echo "One for $NAME, one for me."
+  echo "One for $name, one for me."
 }
 
 main "$@"
